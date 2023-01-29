@@ -9,7 +9,6 @@ import pandas as pd
 import numpy as np
 import json
 import io
-from ipywidgets.embed import embed_minimal_html
 import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
