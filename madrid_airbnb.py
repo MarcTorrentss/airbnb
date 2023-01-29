@@ -20,7 +20,7 @@ warnings.simplefilter(action='ignore', category=FutureWarning)
 # from branca.colormap import LinearColormap
 
 # Gráficos e imágenes
-import IPython.display as display
+# import IPython.display as display
 from PIL import Image
 import matplotlib.pyplot as plt
 from matplotlib.image import imread
