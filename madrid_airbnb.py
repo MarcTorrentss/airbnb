@@ -40,7 +40,7 @@ import streamlit.components.v1 as components
 
 
 #-----lectura del dataset--------------------------------------------------------------------------
-df = pd.read_csv('AirBnb_anuncios.csv')
+df = pd.read_csv('airbnb_anuncios.csv')
 
 #-----configuracion de página--------------------------------------------------------------------------
 
