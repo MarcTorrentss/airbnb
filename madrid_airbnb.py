@@ -40,7 +40,7 @@ import streamlit.components.v1 as components
 
 
 #-----lectura del dataset--------------------------------------------------------------------------
-df = pd.read_csv('datos/AirBnb_anuncios.csv')
+df = pd.read_csv('AirBnb_anuncios.csv')
 
 #-----configuracion de página--------------------------------------------------------------------------
 
@@ -150,7 +150,7 @@ with bloques[1]:
     st.text("")
 
     st.markdown("**Mostramos un gráfico de la cantidad de airbnbs según los distritos de Madrid**")
-    i1 = Image.open('datos/i1.png')
+    i1 = Image.open('i1.png')
     st.image(i1)
     st.markdown('Vemos que la gran mayoria de airbnbs estan en el **centro**.')
 
@@ -165,7 +165,7 @@ with bloques[1]:
     st.text("")
 
     st.markdown("**Ahora mostramos un gráfico de la cantidad de airbnbs según los vecindarios de Madrid**")
-    i2 = Image.open('datos/i2.png')
+    i2 = Image.open('i2.png')
     st.image(i2)
     st.markdown('Visto también el gráfico anterior, los vecindarios de **Embajadores, Universidad, Palacio, Sol, Justicia y Cortes** seguramente pertenecen al **centro**.')
 
@@ -180,7 +180,7 @@ with bloques[1]:
     st.text("")
 
     st.markdown("**Ahora mostramos un gráfico de la cantidad de airbnbs según el tipo de alojamiento**")
-    i3 = Image.open('datos/i3.png')
+    i3 = Image.open('i3.png')
     st.image(i3)
     st.markdown('Vemos que la mayoria de airbnbs de Madrid son **apartamentos o casas enteras** seguidos de **habitaciones privadas**.')
 
@@ -195,7 +195,7 @@ with bloques[1]:
     st.text("")
 
     st.markdown("**Ahora mostramos un gráfico boxplot de la disponibilidad anual de los airbnb de la ciudad**")
-    i4 = Image.open('datos/i4.png')
+    i4 = Image.open('i4.png')
     st.image(i4)
     st.markdown('''**El gráfico boxplot muestra la disponibilidad o cantidad de días en los que se puede alquilar un airbnb en los distintos vecindarios.**
     
@@ -266,7 +266,7 @@ ax[0].set_title('Pearson')
 ax[1].set_title('Spearman')
 fig.show();''')
 
-    i5 = Image.open('datos/i5.png')
+    i5 = Image.open('i5.png')
     st.image(i5)
 
     st.markdown('Vemos que la matriz de correlación de Pearson muestra unas dependencias entre variables muy pobres')
@@ -282,14 +282,14 @@ Y = df2['price'].values''')
     #st.markdown("")
 
     #st.markdown("<h3>Regresión lineal múltiple</h3>", unsafe_allow_html=True)
-    #i8 = Image.open('datos/i8.png')
+    #i8 = Image.open('i8.png')
     #st.image(i8)
 
     st.markdown("")
     st.markdown("")
 
     st.markdown("<h3>Vecinos cercanos KNN</h3>", unsafe_allow_html=True)
-    i7 = Image.open('datos/i7.png')
+    i7 = Image.open('i7.png')
     st.image(i7)
 
     # Calculamos el valor de K (distancia vecinos) que mejor "accuracy" tiene
@@ -312,7 +312,7 @@ df_scores.set_index("K")["score"].plot(label="KNN Score")
 plt.legend()
 plt.show();''')
 
-    i6 = Image.open('datos/i6.png')
+    i6 = Image.open('i6.png')
     st.image(i6)
 
     st.markdown("<h3>Conclusiones del modelo</h3>", unsafe_allow_html=True)
