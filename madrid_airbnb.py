@@ -13,10 +13,10 @@ import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
 # Mapas interactivos
-import folium
-from folium.plugins import FastMarkerCluster
-import geopandas as gpd
-from branca.colormap import LinearColormap
+# import folium
+# from folium.plugins import FastMarkerCluster
+# import geopandas as gpd
+# from branca.colormap import LinearColormap
 
 # Gráficos e imágenes
 import IPython.display as display
