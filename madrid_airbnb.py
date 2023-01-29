@@ -1,6 +1,6 @@
 #-----librerías----------------------------------------------------------------------------------------
 
-# Importamos las librerias para trabajar
+### Importamos las librerias para trabajar
 import os
 import urllib.request
 import shutil
@@ -10,16 +10,17 @@ import numpy as np
 import json
 import io
 import warnings
+from unicodedata import name
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
-# Mapas interactivos
+### Mapas interactivos
 # import folium
 # from folium.plugins import FastMarkerCluster
 # import geopandas as gpd
 # from branca.colormap import LinearColormap
 
 # Gráficos e imágenes
-import IPython.display as display
+# import IPython.display as display
 from PIL import Image
 import matplotlib.pyplot as plt
 from matplotlib.image import imread
