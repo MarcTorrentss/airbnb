@@ -30,9 +30,9 @@ import plotly.express as px
 import plotly.graph_objs as go
 import plotly.graph_objects as go
 from plotly.offline import iplot, init_notebook_mode
-import cufflinks
-cufflinks.go_offline(connected=True)
-init_notebook_mode(connected=True)
+# import cufflinks
+# cufflinks.go_offline(connected=True)
+# init_notebook_mode(connected=True)
 
 # Streamlit
 import streamlit as st
