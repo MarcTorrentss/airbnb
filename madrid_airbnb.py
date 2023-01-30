@@ -224,7 +224,7 @@ df2 = df''')
     # Creamos una nueva variable 'price_range' para facilitar la predicción del modelo
     st.code('''# Creamos una nueva variable 'price_range' para facilitar la predicción del modelo
  
-    # Creamos una lista de condiciones
+# Creamos una lista de condiciones
 condiciones = [
     (df2['price'] < 50),
     (df2['price'] >= 50) & (df2['price'] < 75),
@@ -244,15 +244,16 @@ valores = ['0-50', '50-75', '75-100', '100-125', '125-150', '150-175', '175-200'
 df2['price_range'] = np.select(condiciones, valores)''')
 
     # Borramos las columnas que creemos que no son necesarias para nuestro modelo
-    st.code('''df2 = df2.drop(['host_id', 'reviews_per_month','latitude', 'longitude', 'number_of_reviews', 'calculated_host_listings_count', 'availability_365'], axis=1)''')
+    st.code('''# Borramos las columnas que creemos que no son necesarias para nuestro modelo
+df2 = df2.drop(['host_id', 'reviews_per_month','latitude', 'longitude', 'number_of_reviews', 'calculated_host_listings_count', 'availability_365'], axis=1)''')
 
     # Transformamos algunas columnas con el LabelEncoder
     st.code('''# Transformamos algunas columnas con el LabelEncoder
-    labelencoder = LabelEncoder()
-    df2['neighbourhood_group'] = labelencoder.fit_transform(df2['neighbourhood_group'])
-    df2['neighbourhood'] = labelencoder.fit_transform(df2['neighbourhood'])
-    df2['room_type'] = labelencoder.fit_transform(df2['room_type'])
-    df2['price_range'] = labelencoder.fit_transform(df2['price_range'])''')
+labelencoder = LabelEncoder()
+df2['neighbourhood_group'] = labelencoder.fit_transform(df2['neighbourhood_group'])
+df2['neighbourhood'] = labelencoder.fit_transform(df2['neighbourhood'])
+df2['room_type'] = labelencoder.fit_transform(df2['room_type'])
+df2['price_range'] = labelencoder.fit_transform(df2['price_range'])''')
 
     # Creamos una matriz de correlación doble (Pearson y Spearman)
     st.code('''# Creamos una matriz de correlación doble (Pearson y Spearman)
@@ -269,8 +270,8 @@ fig.show();''')
     i5 = Image.open('i5.png')
     st.image(i5)
 
-    st.markdown('Vemos que la matriz de correlación de Pearson muestra unas dependencias entre variables muy pobres')
-    st.markdown('''Por otro lado la matriz de correlación de Spearman le pasa lo mismo menos con 'Price' y 'Room_type'.''')
+    st.markdown('Vemos que la matriz de correlación de Pearson muestra unas dependencias entre variables muy pobres.')
+    st.markdown('''Por otro lado la matriz de correlación de Spearman le pasa lo mismo menos con `Price` y `Room_type`.''')
     st.markdown("")
 
     # Seleccionamos la variable predictora X y la variable de respuesta Y
