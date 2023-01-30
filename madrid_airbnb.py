@@ -130,10 +130,10 @@ missing_values = missing_values[missing_values['porcentaje'] > 0]''')
 
     st.dataframe(missing_values)
 
-    st.code('''# Eliminamos las columnas deseadas menos id que a lo mejor la necesitaremos más adelante
+    st.code('''# Procedemos a eliminamos las columnas deseadas
 df = df.drop(['name', 'host_name', 'last_review'], axis=1)''')
 
-    # Ponemos a zero los valores nulos anteriores
+    # Reemplazamos los valores nulos de 'reviews_per_month' por zero
     df = df.fillna(value={'reviews_per_month': 0})
     st.code('''# Ponemos a zero los valores nulos de 'reviews_per_month'
 df = df.fillna(value={'reviews_per_month': 0})''')
