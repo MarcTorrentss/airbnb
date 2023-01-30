@@ -270,8 +270,7 @@ fig.show();''')
     i5 = Image.open('i5.png')
     st.image(i5)
 
-    st.markdown('Vemos que la matriz de correlación de Pearson muestra unas dependencias entre variables muy pobres.')
-    st.markdown('''Por otro lado la matriz de correlación de Spearman le pasa lo mismo menos con `Price` y `Room_type`.''')
+    st.markdown('Vemos que tanto la matriz de correlación de Pearson como de Spearman muestran unas dependencias entre variables muy pobres excepto entre `Price` y `Room_type`.')
     st.markdown("")
 
     # Seleccionamos la variable predictora X y la variable de respuesta Y
